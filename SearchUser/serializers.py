@@ -8,3 +8,4 @@ class GitHubUserSerializer(serializers.ModelSerializer):
         model = GitHubUser
         fields = '__all__'
 
+
