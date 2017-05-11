@@ -37,6 +37,7 @@ def search_user(request):
         print(results)
         serializer = GitHubUserSerializer(results,
                                           many=True)
+
         return Response(serializer.data)
     except MultiValueDictKeyError:
-        return HttpResponse("Error!! No search data")
+        return HttpResponse("Error!! No search data")   

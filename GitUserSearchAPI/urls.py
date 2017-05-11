@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.views.generic import TemplateView
+
 from SearchUser import views
 
 urlpatterns = [
+    url(r'^main/', TemplateView.as_view(template_name="SearchUser/main.html")),
     url(r'^search/', views.search_user),
     url(r'^admin/', admin.site.urls),
+
 ]
